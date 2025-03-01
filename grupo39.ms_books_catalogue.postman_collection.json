@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "77219649-287e-408e-b16a-135d8ef14f49",
+		"name": "grupo39.ms_books_catalogue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28808256",
+		"_collection_link": "https://bold-capsule-344643.postman.co/workspace/My-Workspace~75e034c2-72fd-4a4e-8f1f-ae017f637794/collection/28808256-77219649-287e-408e-b16a-135d8ef14f49?action=share&source=collection_link&creator=28808256"
+	},
+	"item": [
+		{
+			"name": "Crear un libro (POST)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Viaje al centro de la tierra\",\r\n    \"author\": \"Julio Verne\",\r\n    \"isbn\": \"979-2822705479\",\r\n    \"category\": \"Ciencia Ficcion\",\r\n    \"rating\": 3.0,\r\n    \"visible\": true,\r\n    \"publicationDate\": \"2000-03-18\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los libros (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un libro por su ID (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un libro (PUT)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un libro (DELETE)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar libros por título (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/search/title?title=El Hobbit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"search",
+						"title"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "El Hobbit"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar libros por autor (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/search/author?author=J.R.R. Tolkien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"search",
+						"author"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "J.R.R. Tolkien"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar libros por categoría (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/search/category?category=Fantasía",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"search",
+						"category"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Fantasía"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar libros por visibilidad (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/search/visibility?visible=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"search",
+						"visibility"
+					],
+					"query": [
+						{
+							"key": "visible",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar libros por combinación de atributos (GET)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/search?title=El Hobbit&author=J.R.R.",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "El Hobbit"
+						},
+						{
+							"key": "author",
+							"value": "J.R.R."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hacer una solicitud a Eureka para obtener la dirección IP del servicio",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8761/eureka/apps/ms-books-catalogue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						"eureka",
+						"apps",
+						"ms-books-catalogue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar libros por Stock",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books/1/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"1",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

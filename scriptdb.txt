@@ -1,0 +1,25 @@
+CREATE DATABASE books_db;
+
+USE books_db;
+
+CREATE TABLE books (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    isbn VARCHAR(13) UNIQUE NOT NULL,
+    category VARCHAR(255),
+    rating DOUBLE CHECK (rating >= 1 AND rating <= 5),
+    stock INT UNSIGNED DEFAULT 0,
+    visible BOOLEAN DEFAULT TRUE,
+    publication_date DATE
+);
+
+
+ALTER TABLE books
+ADD COLUMN stock INT UNSIGNED DEFAULT 0;
+
+
+ALTER TABLE books
+ADD COLUMN price DECIMAL(10,2) UNSIGNED NOT NULL DEFAULT 0.00;
+
+
